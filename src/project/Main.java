@@ -9,11 +9,14 @@ import project.generate.DefaultEventGenerator;
 import project.generate.EventGenerator;
 import project.model.UserEvent;
 import project.produce.Producer;
+import project.queue.DefaultEventQueue;
+import project.queue.EventQueue;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         // milestone1();
-        milestone2();
+        // milestone2();
+        milestone3();
     }
 
     public static void milestone1(){
@@ -26,11 +29,27 @@ public class Main {
     }
 
     public static void milestone2() throws InterruptedException{
-        Producer producer = new Producer(new DefaultEventGenerator(), 10);
+        EventQueue queue = new DefaultEventQueue();
+        Producer producer = new Producer(new DefaultEventGenerator(), 10, queue);
         Thread thread = new Thread(producer, "Producer - 1");
 
         System.out.println("Main thread started producer");
         thread.start();
         System.out.println("Main thread continues...");
+    }
+
+    public static void milestone3() throws InterruptedException{
+        EventQueue queue = new DefaultEventQueue();
+        Producer producer = new Producer(new DefaultEventGenerator(), 10, queue);
+
+        Thread thread = new Thread(producer, "Producer - 1");
+
+        System.out.println("Main thread started producer");
+        thread.start();
+        System.out.println("Main thread continues...");
+
+        thread.join();
+
+        System.out.println("Queue Size = "+ queue.size());
     }
 }
