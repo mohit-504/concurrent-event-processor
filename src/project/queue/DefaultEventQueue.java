@@ -10,17 +10,17 @@ import project.model.UserEvent;
 public class DefaultEventQueue implements EventQueue {
     private final Queue<UserEvent> queue = new LinkedList<>();
     @Override
-    public void add(UserEvent event) {
+    public synchronized void add(UserEvent event) {
         queue.add(event);
     }
 
     @Override
-    public UserEvent poll() {
+    public synchronized UserEvent poll() {
         return queue.poll();
     }
 
     @Override
-    public int size() {
+    public synchronized int size() {
         return queue.size();
     }
     
