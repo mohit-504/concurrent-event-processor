@@ -1,8 +1,8 @@
 // EventGenerator.java 
 
-package src.project.generate;
+package project.generate;
 
-import src.project.model.UserEvent;
+import project.model.UserEvent;
 
 public interface EventGenerator {
     UserEvent generateEvent();

@@ -1,6 +1,6 @@
 // UserEvent.java 
 
-package src.project.model;
+package project.model;
 
 import lombok.Builder;
 import lombok.Value;

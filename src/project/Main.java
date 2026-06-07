@@ -1,14 +1,14 @@
 // Main.java 
 
-package src.project;
+package project;
 
 import java.util.List;
 import java.util.stream.IntStream;
 
-import src.project.generate.DefaultEventGenerator;
-import src.project.generate.EventGenerator;
-import src.project.model.UserEvent;
-import src.project.produce.Producer;
+import project.generate.DefaultEventGenerator;
+import project.generate.EventGenerator;
+import project.model.UserEvent;
+import project.produce.Producer;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {

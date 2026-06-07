@@ -1,11 +1,11 @@
 // DefaultEventGenerator.java 
 
-package src.project.generate;
+package project.generate;
 
 import java.util.Random;
 
-import src.project.model.EventType;
-import src.project.model.UserEvent;
+import project.model.EventType;
+import project.model.UserEvent;
 
 public class DefaultEventGenerator implements EventGenerator {
 

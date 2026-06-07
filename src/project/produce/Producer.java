@@ -1,11 +1,11 @@
 // Producer.java
 
-package src.project.produce;
+package project.produce;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import src.project.generate.EventGenerator;
-import src.project.model.UserEvent;
+import project.generate.EventGenerator;
+import project.model.UserEvent;
 
 @Getter
 @RequiredArgsConstructor
